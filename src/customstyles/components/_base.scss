@@ -65,7 +65,7 @@ body {
 .homeContainer {
   display: grid;
   margin: 0 auto;
-  grid-template-rows: 7rem 22vw min-content repeat(3, min-content);
+  grid-template-rows: 7rem 22vw repeat(3, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start]repeat(
       8,
