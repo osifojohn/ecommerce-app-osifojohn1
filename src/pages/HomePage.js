@@ -5,7 +5,7 @@ import shopping_logo from "../assets/online-shopping.svg";
 //////
 
 //menutoggle
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 
 ///
 
