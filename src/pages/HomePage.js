@@ -279,151 +279,181 @@ const HomePage = () => {
       <section className="productsCategories">
         <div className="product">
           <h2 className="product__category">Top Sellers in PC for you</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/9/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/9/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Fashion for ladies</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/41/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/41/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Explore home Furniture</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/27/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/27/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Explore home Lightening</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/98/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/98/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Men watches</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/64/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/64/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Ladies watches</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/67/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/67/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Women jewellery</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/76/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/76/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Ladies bag</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/71/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/71/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Smartphone</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/2/2.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/2/2.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Men shirt</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/55/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/55/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Skincare</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/16/1.png"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/16/1.png"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Men shoes</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/56/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/56/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Fragrance</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/11/2.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/11/2.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Explore tops</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/36/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/36/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
 
         <div className="product">
           <h2 className="product__category">Ladies footwear</h2>
-          <img
-            src={"https://dummyjson.com/image/i/products/49/1.jpg"}
-            alt="img2"
-            className="product__photo"
-          />
+          <figure className="product__fig">
+            <img
+              src={"https://dummyjson.com/image/i/products/49/1.jpg"}
+              alt="img2"
+              className="product__photo"
+            />
+          </figure>
           <button className="product__link">Shop now</button>
         </div>
       </section>
