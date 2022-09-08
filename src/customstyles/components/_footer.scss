@@ -1,0 +1,15 @@
+.footer {
+  grid-column: full-start/full-end;
+  background-color: var(--color-secondary);
+  padding: 3rem 0;
+}
+.copyright {
+  text-align: center;
+  color: #aaa;
+  font-size: 1.5rem;
+  & span {
+    color: #ffffffe6;
+    font-weight: 600;
+  }
+}
+

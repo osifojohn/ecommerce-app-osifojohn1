@@ -1,0 +1,78 @@
+:root {
+  --color-primary: rgb(69, 172, 203);
+  --color-primary-light: #d6e4e8;
+
+  //37475A
+  --color-secondary: #37475a;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-2);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-grey-light-1),
+    var(--color-grey-light-1)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  box-shadow: var(--shadow-dark);
+  margin: 0 auto;
+}
+
+.homeContainer {
+  display: grid;
+  margin: 0 auto;
+  grid-template-rows: 7rem 22vw min-content repeat(3, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start]repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @include respond(phone) {
+    grid-template-rows: 12rem 35vw min-content repeat(3, min-content);
+  }
+}
