@@ -19,12 +19,12 @@
   &__view {
     display: grid;
     grid-template-columns: repeat(2, min-content);
-    gap: 1rem;
+    gap: 0.5rem;
     margin-left: 2rem;
     font-size: 2rem;
 
     @include respond(phone) {
-      margin-left: 1rem;
+      margin-left: 0.8rem;
     }
 
     & > * {

@@ -34,6 +34,8 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  scroll-behavior: smooth;
+  scroll-padding-top: 12rem;
 
   @include respond(tab-land) {
     font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
@@ -57,15 +59,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
-  box-shadow: var(--shadow-dark);
   margin: 0 auto;
-  min-height: 100vh;
 }
 
-.homeContainer {
+.container {
+  min-height: 100vh;
   display: grid;
   margin: 0 auto;
-  grid-template-rows: 7rem 22vw repeat(3, min-content);
+  grid-template-rows: 7rem 22vw min-content;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start]repeat(
       8,
@@ -74,6 +75,6 @@ body {
     [center-end] minmax(6rem, 1fr) [full-end];
 
   @include respond(phone) {
-    grid-template-rows: 12rem 35vw min-content repeat(3, min-content);
+    grid-template-rows: 12rem 35vw min-content;
   }
 }

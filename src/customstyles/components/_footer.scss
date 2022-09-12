@@ -2,6 +2,7 @@
   grid-column: full-start/full-end;
   background-color: var(--color-secondary);
   padding: 3rem 0;
+  align-self: end;
 }
 .copyright {
   text-align: center;
@@ -12,4 +13,3 @@
     font-weight: 600;
   }
 }
-
