@@ -6,10 +6,11 @@ import { BsSearch } from "react-icons/bs";
 import { useProductsContext } from "../contexts/products_context";
 
 const Navbar = () => {
-  const { isMenuOpen, closeMenu, openMenu, queryProducts } =
+  const { isMenuOpen, closeMenu, openMenu, queryProducts, query } =
     useProductsContext();
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (query !== "") return;
   };
 
   return (
@@ -20,6 +21,8 @@ const Navbar = () => {
         <form className="search">
           <input
             type="text"
+            value={query}
+            onChange={queryProducts}
             className="search__input"
             placeholder="Search by name e.g shirt"
           />

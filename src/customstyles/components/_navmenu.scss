@@ -4,7 +4,7 @@
   padding-bottom: 3rem;
   @include respond(phone) {
     grid-column: full-start/full-end;
-    grid-row: 3/4;
+    grid-row: 2/3;
     display: block;
   }
 }

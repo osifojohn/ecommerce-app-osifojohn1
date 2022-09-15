@@ -1,5 +1,5 @@
 .header {
-  grid-column: full-start/full-end;
+  grid-column: 1/-1;
   grid-row: 1/2;
   background-color: #fff;
   box-shadow: var(--shadow-light);
@@ -56,8 +56,7 @@
   margin-left: 8rem;
 
   @include respond(tab-port) {
-    flex: 0 0 35%;
-    margin-left: 1.5rem;
+    margin-left: 2rem;
   }
 
   @include respond(phone) {
@@ -82,20 +81,25 @@
     border: none;
     transition: all 0.4s;
 
+    @include respond(tab-port) {
+      width: 85%;
+    }
+
     @include respond(phone) {
       width: 80%;
     }
 
     &:focus {
-      width: 100%;
+      width: 90%;
       border: none;
       outline: none;
       box-shadow: 0 1px 1.2rem #b8c6db;
       -moz-box-shadow: 0 1px 1.2rem #b8c6db;
       -webkit-box-shadow: 0 1px 1.2rem #b8c6db;
-      @include respond(tab-port) {
-        width: 80%;
+      @include respond(tab-land) {
+        width: 90%;
       }
+
       @include respond(phone) {
         width: 90%;
       }

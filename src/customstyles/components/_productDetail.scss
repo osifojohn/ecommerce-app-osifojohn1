@@ -1,0 +1,121 @@
+.detail {
+  grid-column: center-start/center-end;
+
+  @include respond(phone) {
+    grid-column: full-start/full-end;
+    margin: 0 3rem;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
+  gap: 4rem 5rem;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+  }
+  @include respond(tab-port) {
+    grid-template-columns: 100%;
+  }
+
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+
+  &__fig {
+    width: 100%;
+    height: 100%;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__desc {
+    padding: 1.2rem 1.7rem;
+
+    & h3 {
+      font-size: 1.9rem;
+    }
+  }
+}
+.rating {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 8.5rem;
+  align-items: center;
+  font-size: 2rem;
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: var(--line);
+  &__stars {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+  &__count {
+    justify-self: center;
+    font-size: 1.5rem;
+  }
+}
+
+.more-info {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  gap: 2rem 8.5rem;
+
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--line);
+
+  & h3 {
+    color: inherit;
+    font-size: 1.5rem;
+  }
+
+  & p {
+    font-size: 1.35rem;
+    text-transform: capitalize;
+  }
+}
+
+.cart {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  gap: 1.5rem 2.5rem;
+  align-items: center;
+  justify-items: center;
+  font-size: 3rem;
+
+  & > *:not(:last-child) {
+    background-color: transparent;
+    font-size: 2.5rem;
+  }
+  & button {
+    border: none;
+    color: inherit;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__num {
+    font-size: 5rem;
+  }
+
+  &__btn {
+    grid-column: 1/-1;
+    text-transform: uppercase;
+    font-size: 2rem;
+    background-color: var(--color-primary-light);
+    padding: 1rem;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-primary);
+      color: #fff;
+    }
+  }
+}

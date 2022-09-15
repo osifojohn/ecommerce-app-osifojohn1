@@ -4,8 +4,8 @@ import ListView from "./ListView";
 const ProductsList = () => {
   return (
     <>
-      {/* <GridView /> */}
-      <ListView />
+      <GridView />
+      {/* <ListView /> */}
     </>
   );
 };

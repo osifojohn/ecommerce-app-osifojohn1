@@ -1,56 +1,55 @@
 .hero {
   grid-column: full-start/full-end;
 
-  margin: 0.2rem 3rem;
-  box-shadow: var(--shadow-light);
-  margin-top: 3px;
+  margin: 0.2rem;
+  margin-top: 0;
 
   @include respond(tab-land) {
     margin: 0.2rem 1rem;
   }
   @include respond(phone) {
-    margin: 0.3rem 0.3rem;
-  }
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  font-size: 1.8rem;
-  background-color: var(--color-primary-light);
-  display: grid;
-  grid-template-columns: minmax(min-content, max-content) 32vw;
-  justify-content: center;
-  align-content: center;
-  gap: 0 12rem;
-
-  @include respond(phone) {
-    gap: 0 2rem;
-    grid-template-columns: minmax(min-content, max-content) 46vw;
+    margin: 0 0.3rem;
   }
 
-  & h3 {
-    text-align: center;
-    color: var(--color-secondary);
-    align-self: center;
-    justify-self: center;
-  }
-
-  & figure {
+  .swiper {
     width: 100%;
     height: 100%;
-    align-self: stretch;
   }
 
-  & img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: var(--shadow-light);
+  .swiper-slide {
+    font-size: 1.8rem;
+    background-color: var(--color-primary-light);
+    display: grid;
+    grid-template-columns: minmax(min-content, max-content) 32vw;
+    justify-content: center;
+    align-content: center;
+    gap: 0 12rem;
+
+    @include respond(phone) {
+      gap: 0 2rem;
+      grid-template-columns: minmax(min-content, max-content) 46vw;
+    }
+
+    & h3 {
+      text-align: center;
+      color: var(--color-secondary);
+      align-self: center;
+      justify-self: center;
+    }
+
+    & figure {
+      width: 100%;
+      height: 100%;
+      align-self: stretch;
+      box-shadow: var(--shadow-light);
+    }
+
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 

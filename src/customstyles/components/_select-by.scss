@@ -8,10 +8,8 @@
   grid-template-columns: min-content 1fr min-content;
   align-items: center;
 
-  margin: 0 3rem;
-  @include respond(tab-land) {
-    margin: 0;
-  }
+  border-bottom: var(--line);
+
   @include respond(phone) {
     grid-template-columns: min-content 1fr 1fr;
   }

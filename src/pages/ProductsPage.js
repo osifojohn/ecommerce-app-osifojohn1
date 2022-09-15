@@ -8,19 +8,19 @@ const ProductsPage = () => {
   const { products_loading: loading } = useProductsContext();
   if (loading) {
     return (
-      <>
+      <main className="productsPage">
         <Hero />
         <SelectBy />
         <LoadingSpinal />
-      </>
+      </main>
     );
   }
   return (
-    <>
+    <main className="productsPage">
       <Hero />
       <SelectBy />
       <ProductsList />
-    </>
+    </main>
   );
 };
 

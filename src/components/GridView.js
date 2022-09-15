@@ -2,72 +2,40 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import { useProductsContext } from "../contexts/products_context";
+
 const GridView = () => {
+  const { products, fetchSingleProduct, fetchRecommendedProducts } =
+    useProductsContext();
+
+  const handleClick = (id, category) => {
+    fetchSingleProduct(id);
+    fetchRecommendedProducts(id, category);
+  };
+
   return (
-    <main className="gridView">
-      <div className="product">
-        <figure className="product__fig">
-          <Link to="singleproduct">
-            <img
-              src={"https://dummyjson.com/image/i/products/2/2.jpg"}
-              alt={"1"}
-              className="product__photo"
-            />
-          </Link>
-        </figure>
-        <footer className="product__description">
-          <Link to={`products/:${1}`}>
-            {" "}
-            <h3 className="product__name">Nasdfghkjjj</h3>
-          </Link>
-          <Link to={`products/:${1}`}>
-            <p className="product__price">$10000</p>
-          </Link>
-        </footer>
-      </div>
-
-      <div className="product">
-        <figure className="product__fig">
-          <Link to="singleproduct">
-            <img
-              src="https://dummyjson.com/image/i/products/41/1.jpg"
-              alt={"1"}
-              className="product__photo"
-            />
-          </Link>
-        </figure>
-        <footer className="product__description">
-          <Link to={`products/:${1}`}>
-            {" "}
-            <h3 className="product__name">Nasdfghkjjj</h3>
-          </Link>
-          <Link to={`products/:${1}`}>
-            <p className="product__price">10000</p>
-          </Link>
-        </footer>
-      </div>
-
-      <div className="product">
-        <figure className="product__fig">
-          <Link to="singleproduct">
-            <img
-              src={"https://dummyjson.com/image/i/products/2/2.jpg"}
-              alt={"1"}
-              className="product__photo"
-            />
-          </Link>
-        </figure>
-        <footer className="product__description">
-          <Link to={`products/:${1}`}>
-            {" "}
-            <h3 className="product__name">Nasdfghkjjj</h3>
-          </Link>
-          <Link to={`products/:${1}`}>
-            <p className="product__price">10000</p>
-          </Link>
-        </footer>
-      </div>
-    </main>
+    <section className="gridView">
+      {products.map(({ title, id, price, images, category: c }) => {
+        return (
+          <div className="product" key={id}>
+            <figure className="product__fig">
+              <Link to={`:${id}`} onClick={() => handleClick(id, c)}>
+                <img src={images[0]} alt={title} className="product__photo" />
+              </Link>
+            </figure>
+            <footer className="product__description">
+              <Link to={`:${id}`} onClick={() => handleClick(id, c)}>
+                {" "}
+                <h3 className="product__name">{title}</h3>
+              </Link>
+              <Link to={`:${id}`} onClick={() => handleClick(id, c)}>
+                <p className="product__price">${price}</p>
+              </Link>
+            </footer>
+          </div>
+        );
+      })}
+    </section>
   );
 };
 
