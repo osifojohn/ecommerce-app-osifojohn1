@@ -1,36 +1,36 @@
 import React from "react";
 import { BsFillGridFill, BsList } from "react-icons/bs";
+import { useFilterContext } from "../contexts/filter_context";
+import Sort from "./Sort";
+import Filter from "./Filter";
 
 const SelectBy = () => {
+  const { gridView, listView, grid_view } = useFilterContext();
+
   return (
     <section className="select">
       <div className="select__view">
-        <div className="select__gridview select__gridview--active">
-          <BsFillGridFill />
+        <div>
+          <BsFillGridFill
+            onClick={() => gridView()}
+            className={`${grid_view ? "active--view" : null}`}
+          />
         </div>
-        <div className="select__listview--active">
-          <BsList />
+        <div>
+          <BsList
+            onClick={() => listView()}
+            className={`${!grid_view ? "active--view" : null}`}
+            style={{ fontSize: "2.6rem" }}
+          />
         </div>
       </div>
 
-      <div className="select__price-range">
+      {/* <div className="select__price-range">
         <div>0</div>
         <input type="range" min="0" max="100" name="radio"></input>
-      </div>
-
-      <div className="select__price">
-        <label htmlFor="sort_price">Sort by:</label>
-        <select
-          name="sort_price"
-          id="sort_price"
-          className="select__price-order"
-        >
-          <option value="price-lowest">Price (Lowest)</option>
-          <option value="price-highest">Price (Highest)</option>
-          <option value="name-a">Name (A-Z)</option>
-          <option value="name-z">Name (Z - A)</option>
-        </select>
-      </div>
+      </div> */}
+      <Filter />
+      <Sort />
     </section>
   );
 };

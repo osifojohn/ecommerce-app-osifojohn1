@@ -4,12 +4,15 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 import { ProductsProvider } from "./contexts/products_context";
+import { FilterProvider } from "./contexts/filter_context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ProductsProvider>
-      <App />
+      <FilterProvider>
+        <App />
+      </FilterProvider>
     </ProductsProvider>
   </React.StrictMode>
 );

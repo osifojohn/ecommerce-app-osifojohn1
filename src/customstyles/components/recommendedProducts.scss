@@ -10,13 +10,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
+    justify-content: space-evenly;
+    // position: relative;
   }
 
   .swiper-slide figure {
-    width: 92%;
-    height: 92%;
+    width: 91%;
+    height: 91%;
   }
 
   .swiper-slide img {
@@ -28,13 +28,13 @@
   .swiper-slide div {
     display: grid;
     grid-template-columns: minmax(min-content, max-content) min-content;
-    justify-items: start;
-
+    align-items: center;
     gap: 0 30rem;
     font-size: 1.3rem;
 
     @include respond(tab-land) {
       gap: 0 20rem;
+      line-height: 1;
     }
 
     @include respond(tab-port) {
@@ -42,8 +42,17 @@
     }
 
     @include respond(phone) {
-      gap: 0 5rem;
-      font-size: 0.7rem;
+      gap: 0 2rem;
+      font-size: 1.2rem;
+      padding: 0.2rem 0 2rem 0;
+
+      & > :not(:last-child) {
+        margin-left: 1.5rem;
+      }
+      & > :last-child {
+        margin-right: 1rem;
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -77,6 +86,15 @@
     .swiper[dir="rtl"] .swiper-slide.swiper-slide-next:nth-child(2) {
       transform: translateX(-55%);
     }
+  }
+  .swiper-pagination-bullet {
+    background: none !important;
+    opacity: 0 !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 0 !important;
+    background: none !important;
   }
 }
 

@@ -9,11 +9,15 @@ import ProductsList from "./ProductsList";
 import PageHero from "./PageHero";
 import ProductDetails from "./ProductDetails";
 import RecommededProducts from "./RecommededProducts";
+import PageNavbar from "./PageNavbar";
+import SearchHero from "./SeachHero";
+import Stars from "./Stars";
 
 export {
   Navbar,
   Footer,
   Hero,
+  SearchHero,
   NavMenu,
   ProductsCategories,
   SelectBy,
@@ -22,4 +26,6 @@ export {
   PageHero,
   ProductDetails,
   RecommededProducts,
+  PageNavbar,
+  Stars,
 };

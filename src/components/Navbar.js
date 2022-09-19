@@ -1,13 +1,19 @@
 import React from "react";
+
 import { FaShoppingCart, FaUserPlus, FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
 
 import { useProductsContext } from "../contexts/products_context";
 
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const { isMenuOpen, closeMenu, openMenu, queryProducts, query } =
     useProductsContext();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query !== "") return;
@@ -15,10 +21,12 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="header" onSubmit={handleSubmit}>
-        <button className="logo">MrJohny</button>
+      <header className="header">
+        <button className="logo" onClick={() => navigate("/")}>
+          <h1>MrJohny</h1>
+        </button>
 
-        <form className="search">
+        <form className="search" onSubmit={handleSubmit}>
           <input
             type="text"
             value={query}
@@ -49,13 +57,15 @@ const Navbar = () => {
             </button>
           </div>
 
-          <button className="nav__hamburger">
-            {isMenuOpen ? (
-              <AiOutlineClose onClick={closeMenu} />
-            ) : (
-              <FaBars onClick={openMenu} />
-            )}
-          </button>
+          {!query ? (
+            <button className="nav__hamburger">
+              {isMenuOpen ? (
+                <AiOutlineClose onClick={closeMenu} />
+              ) : (
+                <FaBars onClick={openMenu} />
+              )}
+            </button>
+          ) : null}
         </nav>
       </header>
     </>

@@ -29,7 +29,7 @@
   border: none;
   background-color: transparent;
 
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-left: 2.5rem;
   color: var(--color-primary);
@@ -39,8 +39,8 @@
   }
 
   @include respond(phone) {
-    font-size: 2rem;
     margin-right: 2rem;
+    font-size: 1.3rem;
   }
 }
 

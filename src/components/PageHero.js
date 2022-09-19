@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-const PageHero = () => {
+const PageHero = ({ type, data }) => {
   return (
     <div className="pageHero">
       <h2 className="pageHero__text">

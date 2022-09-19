@@ -90,7 +90,6 @@ export const ProductsProvider = ({ children }) => {
   };
 
   const fetchSingleProduct = async (id) => {
-    console.log(id);
     dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
     try {
       const data = await axios.get(`${API_ENDPOINT}products/${id}`);

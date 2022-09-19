@@ -1,26 +1,60 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+import { LoadingSpinal } from "../components";
+import LoadingErrorMsg from "../components/LoadingErrorMsg";
+
+import { SelectBy, ProductsList, PageNavbar } from "../components";
+
 import { useProductsContext } from "../contexts/products_context";
 
-import { Hero, SelectBy, LoadingSpinal, ProductsList } from "../components";
+import { useFilterContext } from "../contexts/filter_context";
 
 const ProductsPage = () => {
-  const { products_loading: loading } = useProductsContext();
+  const { products_loading: loading, products_error: error } =
+    useProductsContext();
+  const { filtered_products: products } = useFilterContext();
+
   if (loading) {
     return (
-      <main className="productsPage">
-        <Hero />
-        <SelectBy />
-        <LoadingSpinal />
-      </main>
+      <>
+        <PageNavbar />
+        <main className="productsPage">
+          <div className="pageHero"></div>
+          <LoadingSpinal />
+        </main>
+      </>
     );
   }
+
+  if (error) {
+    return (
+      <>
+        {" "}
+        <PageNavbar />
+        <main className="productsPage">
+          <div className="pageHero"></div>
+          <LoadingErrorMsg />
+        </main>
+      </>
+    );
+  }
+
+  const title = products.slice(-1).map(({ category }) => category);
+
   return (
-    <main className="productsPage">
-      <Hero />
-      <SelectBy />
-      <ProductsList />
-    </main>
+    <>
+      <PageNavbar />
+      <main className="productsPage">
+        <div className="pageHero">
+          <h2 className="pageHero__text">
+            <Link to="/">Home</Link> /{title}
+          </h2>
+        </div>
+        <SelectBy />
+        <ProductsList products={products} />
+      </main>
+    </>
   );
 };
 

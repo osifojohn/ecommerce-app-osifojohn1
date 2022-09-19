@@ -3,7 +3,7 @@ import "./customstyles/main.scss";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Navbar, Footer } from "./components";
+import { Footer } from "./components";
 
 import { Home, Error, Cart, Products, SingleProduct, Checkout } from "./pages";
 
@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="products" element={<Products />} />

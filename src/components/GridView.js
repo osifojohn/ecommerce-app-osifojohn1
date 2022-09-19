@@ -4,9 +4,15 @@ import { Link } from "react-router-dom";
 
 import { useProductsContext } from "../contexts/products_context";
 
-const GridView = () => {
-  const { products, fetchSingleProduct, fetchRecommendedProducts } =
+import { formatPrice } from "../utils/helpers";
+
+const GridView = ({ products }) => {
+  const { fetchSingleProduct, fetchRecommendedProducts, query } =
     useProductsContext();
+
+  const handlePath = (id) => {
+    return query ? `products/:${id}` : `:${id}`;
+  };
 
   const handleClick = (id, category) => {
     fetchSingleProduct(id);
@@ -19,17 +25,17 @@ const GridView = () => {
         return (
           <div className="product" key={id}>
             <figure className="product__fig">
-              <Link to={`:${id}`} onClick={() => handleClick(id, c)}>
+              <Link to={handlePath(id)} onClick={() => handleClick(id, c)}>
                 <img src={images[0]} alt={title} className="product__photo" />
               </Link>
             </figure>
             <footer className="product__description">
-              <Link to={`:${id}`} onClick={() => handleClick(id, c)}>
+              <Link to={handlePath(id)} onClick={() => handleClick(id, c)}>
                 {" "}
                 <h3 className="product__name">{title}</h3>
               </Link>
-              <Link to={`:${id}`} onClick={() => handleClick(id, c)}>
-                <p className="product__price">${price}</p>
+              <Link to={handlePath(id)} onClick={() => handleClick(id, c)}>
+                <p className="product__price"> {formatPrice(price)}</p>
               </Link>
             </footer>
           </div>

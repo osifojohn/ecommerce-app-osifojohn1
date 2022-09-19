@@ -1,7 +1,7 @@
 import React from "react";
 
 const LoadingSpinal = () => {
-  return <main className='loader'></main>;
+  return <div className="loader"></div>;
 };
 
 export default LoadingSpinal;

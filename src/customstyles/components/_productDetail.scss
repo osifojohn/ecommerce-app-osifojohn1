@@ -1,17 +1,19 @@
 .detail {
   grid-column: center-start/center-end;
+  margin-top: 1rem;
 
   @include respond(phone) {
     grid-column: full-start/full-end;
-    margin: 0 3rem;
+    margin: 1rem 2rem 0 2rem;
   }
 
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
-  gap: 4rem 5rem;
+  gap: 1.5rem 2rem;
 
   @include respond(tab-land) {
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+    grid-template-columns: 60vw 40vw;
   }
   @include respond(tab-port) {
     grid-template-columns: 100%;
@@ -23,15 +25,42 @@
   &__fig {
     width: 100%;
     height: 100%;
+    display: grid;
+    grid-template-rows: 50vh min-content;
+
+    @include respond(phone) {
+      grid-template-rows: 45vh min-content;
+    }
   }
   &__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
   }
 
+  &__gallery {
+    height: 6.5rem;
+    width: 6.5rem;
+    margin-top: 0.7rem;
+    margin-left: 0.4rem;
+
+    display: flex;
+    flex-direction: row;
+
+    & > *:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+    & > * {
+      border: 2px solid var(--color-primary-light);
+      cursor: pointer;
+      height: 6.5rem;
+      width: 6.5rem;
+    }
+  }
+  &__active-image {
+    border: 2px solid var(--color-primary);
+  }
   &__desc {
-    padding: 1.2rem 1.7rem;
+    padding: 1.2rem 1.5rem;
 
     & h3 {
       font-size: 1.9rem;

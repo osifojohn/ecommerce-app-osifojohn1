@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-import shopping_logo from "../assets/online-shopping.svg";
+import { useProductsContext } from "../contexts/products_context";
+import { PageHero } from ".";
+import { SelectBy } from ".";
 
 //////////
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,7 +18,11 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 //////////////////
 
+import { heroLink } from "../utils/constants";
+
 const Hero = () => {
+  const { fetchProducts } = useProductsContext();
+
   return (
     <div className="hero">
       <Swiper
@@ -32,85 +39,23 @@ const Hero = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <h3 className="hero__text">
-            We deliver to over 150 <br />
-            regions and countries
-          </h3>
-          <figure className="hero__fig">
-            <img src={shopping_logo} alt="img1" className="hero__photo" />
-          </figure>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <h3 className="hero__text">
-            We deliver to over 150 <br />
-            regions and countries
-          </h3>
-          <figure className="hero__fig">
-            <img
-              src="https://dummyjson.com/image/i/products/41/1.jpg"
-              alt="img1"
-              className="hero__photo"
-            />
-          </figure>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <h3 className="hero__text">
-            Lorem, ipsum dolor
-            <br /> sit amet consectetur
-          </h3>
-          <figure className="hero__fig">
-            <img
-              src={"https://dummyjson.com/image/i/products/2/2.jpg"}
-              alt="img1"
-              className="hero__photo"
-            />
-          </figure>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <h3 className="hero__text">
-            Lorem, ipsum dolor
-            <br /> sit amet consectetur
-          </h3>
-          <figure className="hero__fig">
-            <img
-              src={"https://dummyjson.com/image/i/products/98/1.jpg"}
-              alt="img1"
-              className="hero__photo"
-            />
-          </figure>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <h3 className="hero__text">
-            Lorem, ipsum dolor
-            <br /> sit amet consectetur
-          </h3>
-          <figure className="hero__fig">
-            <img
-              src={"https://dummyjson.com/image/i/products/9/1.jpg"}
-              alt="img1"
-              className="hero__photo"
-            />
-          </figure>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <h3 className="hero__text">
-            Lorem, ipsum dolor
-            <br /> sit amet consectetur
-          </h3>
-          <figure className="hero__fig">
-            <img
-              src={"https://dummyjson.com/image/i/products/27/1.jpg"}
-              alt="img1"
-              className="hero__photo"
-            />
-          </figure>
-        </SwiperSlide>
+        {heroLink.map(({ id, image, name, text, url }) => {
+          return (
+            <SwiperSlide key={id}>
+              <h3 className="hero__text">{text}</h3>
+              <figure className="hero__fig">
+                <Link to={url}>
+                  <img
+                    src={image}
+                    alt={name}
+                    className="hero__photo"
+                    onClick={() => fetchProducts(name)}
+                  />
+                </Link>
+              </figure>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

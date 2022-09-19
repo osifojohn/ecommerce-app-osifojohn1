@@ -1,3 +1,5 @@
+import shopping_logo from "../assets/online-shopping.svg";
+
 export const productsCategories = [
   {
     id: "smartphones",
@@ -114,6 +116,39 @@ export const productsCategoriesNames = [
   { id: 16, url: "#home-decoration", text: "home decoration" },
   { id: 17, url: "#furniture", text: "furniture" },
   { id: 18, url: "#skincare", text: "skincare" },
+];
+
+export const heroLink = [
+  {
+    id: 1,
+    name: "mens-watches",
+    url: "/products",
+    text: "We deliver to over 150 regions and countries",
+    image: shopping_logo,
+  },
+
+  {
+    id: 2,
+    name: "mens-watches",
+    url: "/products",
+    text: "Lorem ipsum dolor sit amet consectetur",
+    image: "https://dummyjson.com/image/i/products/62/1.jpg",
+  },
+
+  {
+    id: 3,
+    name: "laptops",
+    url: "/products",
+    text: "Aperiam cupiditate  quiautem facilis corporis",
+    image: "https://dummyjson.com/image/i/products/9/2.png",
+  },
+  {
+    id: 4,
+    name: "lighting",
+    url: "/products",
+    text: " Adipisci quam ratione totam excepturi repellat odio ",
+    image: "https://dummyjson.com/image/i/products/98/1.jpg",
+  },
 ];
 
 export const API_ENDPOINT = "https://dummyjson.com/";

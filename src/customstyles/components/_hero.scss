@@ -1,6 +1,7 @@
 .hero {
   grid-column: full-start/full-end;
 
+  height: 50vh;
   margin: 0.2rem;
   margin-top: 0;
 
@@ -9,6 +10,7 @@
   }
   @include respond(phone) {
     margin: 0 0.3rem;
+    height: 23vh;
   }
 
   .swiper {
@@ -20,7 +22,7 @@
     font-size: 1.8rem;
     background-color: var(--color-primary-light);
     display: grid;
-    grid-template-columns: minmax(min-content, max-content) 32vw;
+    grid-template-columns: 25% 32vw;
     justify-content: center;
     align-content: center;
     gap: 0 12rem;
@@ -35,6 +37,9 @@
       color: var(--color-secondary);
       align-self: center;
       justify-self: center;
+      @include respond(phone) {
+        font-size: 1.75rem;
+      }
     }
 
     & figure {
@@ -48,7 +53,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      // object-fit: cover;
     }
   }
 }

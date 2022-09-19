@@ -12,7 +12,24 @@ import "swiper/css/pagination";
 // import required modules
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
 
-export const RecommededProducts = () => {
+import { useProductsContext } from "../contexts/products_context";
+
+import { formatPrice } from "../utils/helpers";
+
+export const RecommededProducts = ({ loading, error, products }) => {
+  const { fetchSingleProduct, fetchRecommendedProducts } = useProductsContext();
+
+  const handleClick = (id, category) => {
+    fetchSingleProduct(id);
+    fetchRecommendedProducts(id, category);
+  };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  if (error) {
+    return <div>Sorry, An Error Occured</div>;
+  }
   return (
     <section className="recommended-products">
       <Swiper
@@ -37,42 +54,24 @@ export const RecommededProducts = () => {
         modules={[Keyboard, Scrollbar, Navigation, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <figure>
-            <img
-              src={"https://dummyjson.com/image/i/products/64/1.jpg"}
-              alt="jjj"
-            />
-          </figure>
-          <div>
-            <h3>SAMSUNG GALAXY BOOK</h3>
-            <p>$152858</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure>
-            <img
-              src={"https://dummyjson.com/image/i/products/36/1.jpg"}
-              alt="jjj"
-            />
-          </figure>
-          <div>
-            <h3>SAMSUNG GALAXY BOOK</h3>
-            <p>$152858</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure>
-            <img
-              src={"https://dummyjson.com/image/i/products/9/1.jpg"}
-              alt="jjj"
-            />
-          </figure>
-          <div>
-            <h3>SAMSUNG GALAXY BOOK</h3>
-            <p>$152858</p>
-          </div>
-        </SwiperSlide>
+        {products.map((product) => {
+          const { id, images, price, title, category: c } = product;
+          return (
+            <SwiperSlide key={id}>
+              <figure>
+                <img
+                  src={images[0]}
+                  alt={title}
+                  onClick={() => handleClick(id, c)}
+                />
+              </figure>
+              <div>
+                <h3>{title}</h3>
+                <p>{formatPrice(price)}</p>
+              </div>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </section>
   );
