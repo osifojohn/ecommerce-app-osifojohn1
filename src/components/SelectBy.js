@@ -24,11 +24,6 @@ const SelectBy = () => {
           />
         </div>
       </div>
-
-      {/* <div className="select__price-range">
-        <div>0</div>
-        <input type="range" min="0" max="100" name="radio"></input>
-      </div> */}
       <Filter />
       <Sort />
     </section>

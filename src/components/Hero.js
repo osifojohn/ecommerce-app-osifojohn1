@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { useProductsContext } from "../contexts/products_context";
-import { PageHero } from ".";
-import { SelectBy } from ".";
 
 //////////
 import { Swiper, SwiperSlide } from "swiper/react";

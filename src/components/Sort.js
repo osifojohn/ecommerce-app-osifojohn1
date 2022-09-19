@@ -2,6 +2,7 @@ import React from "react";
 import { useFilterContext } from "../contexts/filter_context";
 const Sort = () => {
   const { sort, upDateSort } = useFilterContext();
+
   return (
     <div className="select__price">
       <label htmlFor="sort_price">Sort by:</label>

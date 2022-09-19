@@ -6,7 +6,6 @@ import ProductsCategories from "./ProductsCategories";
 import SelectBy from "./SelectBy";
 import LoadingSpinal from "./LoadingSpinal";
 import ProductsList from "./ProductsList";
-import PageHero from "./PageHero";
 import ProductDetails from "./ProductDetails";
 import RecommededProducts from "./RecommededProducts";
 import PageNavbar from "./PageNavbar";
@@ -23,7 +22,6 @@ export {
   SelectBy,
   LoadingSpinal,
   ProductsList,
-  PageHero,
   ProductDetails,
   RecommededProducts,
   PageNavbar,
