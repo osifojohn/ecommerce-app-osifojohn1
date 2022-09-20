@@ -64,7 +64,7 @@ body {
 .homePage {
   display: grid;
   @include grid-template-columns;
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - (8rem + 8rem));
 }
 
 .productsPage {
