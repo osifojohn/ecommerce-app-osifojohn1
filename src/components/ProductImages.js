@@ -8,13 +8,14 @@ const ProductImages = ({ images }) => {
       <div className="detail__gallery">
         {images.map((image, index) => {
           return (
-            <img
-              src={image}
-              alt=""
-              key={index}
-              onClick={() => setMain(images[index])}
-              className={`${main === image ? "detail__active-image" : null}`}
-            />
+            <div className="detail__photo" key={index}>
+              <img
+                src={image}
+                alt=""
+                onClick={() => setMain(images[index])}
+                className={`${main === image ? "detail__active-image" : null}`}
+              />
+            </div>
           );
         })}
       </div>
