@@ -8,7 +8,8 @@
 
   .product {
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 30rem auto;
+    grid-template-columns: 100%;
     align-items: center;
     background-color: #fff;
     box-shadow: var(--shadow-light);

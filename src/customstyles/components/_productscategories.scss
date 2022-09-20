@@ -6,7 +6,7 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem;
 
-  .product {
+  .products {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     justify-items: center;

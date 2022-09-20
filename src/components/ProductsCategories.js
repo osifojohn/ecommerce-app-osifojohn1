@@ -14,25 +14,25 @@ const ProductsCategories = () => {
       {productsCategories.map((product) => {
         const { id, name, image } = product;
         return (
-          <div className="product" key={id} id={id}>
-            <Link to="products" className="product__category">
+          <div className="products" key={id} id={id}>
+            <Link to="products" className="products__category">
               {" "}
               <h2 onClick={() => fetchProducts(id)}>{name}</h2>
             </Link>
 
-            <figure className="product__fig">
+            <figure className="products__fig">
               <Link to="products">
                 <img
                   src={image}
                   alt={name}
-                  className="product__photo"
+                  className="products__photo"
                   onClick={() => fetchProducts(id)}
                 />
               </Link>
             </figure>
             <Link
               to="products"
-              className="product__link"
+              className="products__link"
               onClick={() => fetchProducts(id)}
             >
               Shop now

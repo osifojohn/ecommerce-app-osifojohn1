@@ -1,6 +1,5 @@
 import React from "react";
 import { formatPrice } from "../utils/helpers";
-import { Link } from "react-router-dom";
 
 import { useProductsContext } from "../contexts/products_context";
 
@@ -51,10 +50,7 @@ const SingleProductPage = () => {
       <PageNavbar />
       <main className="singleProductPage ">
         <div className="pageHero">
-          <h2 className="pageHero__text">
-            <Link to="/">Home/</Link> <Link to="/products">Products/ </Link>
-            {title}
-          </h2>
+          <h2 className="pageHero__text">{title}</h2>
         </div>
 
         <section className="detail">

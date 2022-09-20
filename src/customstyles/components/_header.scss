@@ -18,13 +18,13 @@
     position: relative;
     align-items: start;
     padding-top: 1.5rem;
-    position: sticky;
-    top: 0;
   }
 }
 
 .home {
   height: 8rem;
+  position: sticky;
+  top: 0;
   @include respond(phone) {
     height: 12rem;
   }

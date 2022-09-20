@@ -6,7 +6,11 @@
   margin-top: 0;
 
   @include respond(tab-land) {
+    height: 30vh;
     margin: 0.2rem 1rem;
+  }
+  @include respond(tab-port) {
+    height: 25vh;
   }
   @include respond(phone) {
     margin: 0 0.3rem;
