@@ -71,7 +71,7 @@ body {
   display: grid;
   @include grid-template-columns;
   grid-template-rows: repeat(3, min-content);
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - (8rem + 8rem));
 }
 
 .singleProductPage {
@@ -83,5 +83,5 @@ body {
     grid-template-rows: repeat(3, min-content) 40vw;
   }
   margin-bottom: 3rem;
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - (8rem + 8rem));
 }
