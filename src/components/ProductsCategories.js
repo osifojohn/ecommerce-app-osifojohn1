@@ -20,16 +20,14 @@ const ProductsCategories = () => {
               <h2 onClick={() => fetchProducts(id)}>{name}</h2>
             </Link>
 
-            <figure className="products__fig">
-              <Link to="products">
-                <img
-                  src={image}
-                  alt={name}
-                  className="products__photo"
-                  onClick={() => fetchProducts(id)}
-                />
-              </Link>
-            </figure>
+            <Link to="products" className="products__img-box">
+              <img
+                src={image}
+                alt={name}
+                className="products__photo"
+                onClick={() => fetchProducts(id)}
+              />
+            </Link>
             <Link
               to="products"
               className="products__link"

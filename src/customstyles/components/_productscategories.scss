@@ -8,8 +8,7 @@
 
   .products {
     display: grid;
-    grid-template-rows: min-content 1fr min-content;
-    justify-items: center;
+    justify-content: center;
     background-color: #fff;
     box-shadow: var(--shadow-light);
     & > * {
@@ -30,22 +29,28 @@
 
     &__category {
       justify-self: start;
-      align-self: start;
-      padding: 1.9rem 0 0.65rem 2.8rem;
       font-size: 1.5rem;
       color: inherit;
       font-weight: 600;
       text-transform: capitalize;
+      margin-left: 2rem;
+      padding: 2rem 0 1.5rem 0;
     }
-    &__fig {
-      width: 90%;
+    &__img-box {
+      justify-self: center;
+      display: inline-block;
+      width: 92%;
       height: 100%;
     }
     &__photo {
       width: 100%;
       height: 100%;
+      justify-self: center;
+      align-self: stretch;
+      justify-self: center;
       object-fit: cover;
     }
+
     &__link {
       justify-self: start;
       margin-left: 2rem;
