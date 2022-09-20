@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="header">
+      <header className="header home">
         <button className="logo" onClick={() => navigate("/")}>
           <h1>MrJohny</h1>
         </button>

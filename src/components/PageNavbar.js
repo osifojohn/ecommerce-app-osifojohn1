@@ -9,7 +9,7 @@ const PageNavbar = () => {
 
   return (
     <>
-      <header className="header">
+      <header className="header pages">
         <button className="logo" onClick={() => navigate("/")}>
           <h1>MrJohny</h1>
         </button>

@@ -6,14 +6,9 @@
   border: 8px solid #f3f3f3;
   border-top: 8px solid #3498db;
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 7rem;
+  height: 7rem;
   animation: spin 1s linear infinite;
-
-  @include respond(phone) {
-    top: 55%;
-    left: 45%;
-  }
 }
 
 @keyframes spin {

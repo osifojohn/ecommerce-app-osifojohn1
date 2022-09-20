@@ -52,7 +52,8 @@ const SingleProductPage = () => {
       <main className="singleProductPage ">
         <div className="pageHero">
           <h2 className="pageHero__text">
-            <Link to="/products">Products</Link> /{title}
+            <Link to="/">Home/</Link> <Link to="/products">Products/ </Link>
+            {title}
           </h2>
         </div>
 

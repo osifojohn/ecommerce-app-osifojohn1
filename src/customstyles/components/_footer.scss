@@ -1,9 +1,7 @@
 .footer {
-  grid-column: 1/-1;
-  grid-row: 3/4;
   background-color: var(--color-secondary);
-  padding: 3rem 0;
-  align-self: end;
+  padding: 2.5rem 0;
+  height: 8rem;
 }
 .copyright {
   text-align: center;

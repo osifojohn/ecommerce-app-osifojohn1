@@ -26,41 +26,48 @@ const HomePage = () => {
 
   if (loading) {
     return (
-      <div className="homePage">
+      <>
         <Navbar />
-        <SearchHero />
-        <SelectBy />
-        <LoadingSpinal />
-      </div>
+        <main className="homePage">
+          <SearchHero />
+          <LoadingSpinal />
+        </main>
+      </>
     );
   }
 
   if (error) {
     return (
-      <div className="homePage">
+      <>
         <Navbar />
-        <SearchHero />
-      </div>
+        <main className="homePage">
+          <SearchHero />
+        </main>
+      </>
     );
   }
 
   if (query === "") {
     return (
-      <div className="homePage">
+      <>
         <Navbar />
-        <Hero />
-        <NavMenu />
-        <ProductsCategories />
-      </div>
+        <main className="homePage">
+          <Hero />
+          <NavMenu />
+          <ProductsCategories />
+        </main>
+      </>
     );
   } else {
     return (
-      <div className="homePage">
+      <>
         <Navbar />
-        <SearchHero />
-        <SelectBy />
-        <ProductsList products={products} />
-      </div>
+        <main className="homePage">
+          <SearchHero />
+          <SelectBy />
+          <ProductsList products={products} />
+        </main>
+      </>
     );
   }
 };

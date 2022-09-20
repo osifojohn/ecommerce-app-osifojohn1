@@ -1,7 +1,9 @@
 .select {
   grid-column: full-start/full-end;
+  grid-row: 2/3;
+  align-self: start;
   background-color: #fff;
-  // box-shadow: var(--shadow-light);
+
   position: relative;
 
   display: grid;
