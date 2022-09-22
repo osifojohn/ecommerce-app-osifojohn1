@@ -8,12 +8,15 @@
   }
 
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
+
   gap: 1.5rem 2rem;
 
   @include respond(tab-land) {
     grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+  }
+  @include respond(tab-port) {
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 35rem));
   }
   @include respond(tab-port) {
     grid-template-columns: 100%;
@@ -23,10 +26,12 @@
   box-shadow: var(--shadow-light);
 
   &__fig {
+    align-self: center;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 50vh min-content;
+    align-items: center;
+    justify-items: center;
 
     @include respond(phone) {
       grid-template-rows: 45vh min-content;

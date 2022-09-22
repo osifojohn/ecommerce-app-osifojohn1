@@ -38,6 +38,15 @@
       margin-left: 2rem;
       padding: 2rem 0 1.5rem 0;
       line-height: 1;
+      @include respond(tab-land) {
+        font-size: 1.3rem;
+      }
+      @include respond(tab-port) {
+        font-size: 1.35rem;
+      }
+      @include respond(phone) {
+        font-size: 1.45rem;
+      }
     }
     &__img-box {
       justify-self: center;
@@ -60,6 +69,13 @@
       font-size: 1.6rem;
       color: inherit;
       line-height: 1;
+
+      @include respond(tab-land) {
+        font-size: 1.3rem;
+      }
+      @include respond(tab-port) {
+        font-size: 1.5rem;
+      }
 
       &:focus {
         outline: none;
