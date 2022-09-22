@@ -10,14 +10,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content, 50rem));
 
-  gap: 1.5rem 2rem;
+  gap: 1.5rem 4rem;
 
   @include respond(tab-land) {
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+    grid-template-columns: 45rem 40rem;
   }
-  @include respond(tab-port) {
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 35rem));
-  }
+
   @include respond(tab-port) {
     grid-template-columns: 100%;
   }
@@ -32,8 +30,7 @@
     display: grid;
     align-items: center;
     justify-items: center;
-
-    @include respond(phone) {
+    @include respond(tab-land) {
       grid-template-rows: 45vh min-content;
     }
   }
