@@ -31,6 +31,9 @@
     align-items: center;
     justify-items: center;
     @include respond(tab-land) {
+      grid-template-rows: 35vh min-content;
+    }
+    @include respond(phone) {
       grid-template-rows: 45vh min-content;
     }
   }
