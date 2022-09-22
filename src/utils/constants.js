@@ -2,15 +2,31 @@ import shopping_logo from "../assets/online-shopping.svg";
 
 export const productsCategories = [
   {
-    id: "smartphones",
-    name: "smartphones",
-    image: "https://dummyjson.com/image/i/products/2/2.jpg",
+    id: "womens-dresses",
+    name: "womens dresses",
+    image: "https://dummyjson.com/image/i/products/41/1.jpg",
+  },
+  {
+    id: "lighting",
+    name: "home lighting",
+    image: "https://dummyjson.com/image/i/products/98/1.jpg",
   },
   {
     id: "laptops",
     name: "laptops",
     image: "https://dummyjson.com/image/i/products/9/1.jpg",
   },
+
+  {
+    id: "smartphones",
+    name: "smartphones",
+    image: "https://dummyjson.com/image/i/products/2/2.jpg",
+  },
+  // {
+  //   id: "laptops",
+  //   name: "laptops",
+  //   image: "https://dummyjson.com/image/i/products/9/1.jpg",
+  // },
   {
     id: "mens-watches",
     name: "mens watches",
@@ -21,11 +37,11 @@ export const productsCategories = [
     name: "mens shirts",
     image: "https://dummyjson.com/image/i/products/55/1.jpg",
   },
-  {
-    id: "womens-dresses",
-    name: "womens dresses",
-    image: "https://dummyjson.com/image/i/products/41/1.jpg",
-  },
+  // {
+  //   id: "womens-dresses",
+  //   name: "womens dresses",
+  //   image: "https://dummyjson.com/image/i/products/41/1.jpg",
+  // },
 
   {
     id: "womens-watches",
@@ -67,11 +83,11 @@ export const productsCategories = [
     name: "automotive",
     image: "https://dummyjson.com/image/i/products/86/1.jpg",
   },
-  {
-    id: "lighting",
-    name: "home lighting",
-    image: "https://dummyjson.com/image/i/products/98/1.jpg",
-  },
+  // {
+  //   id: "lighting",
+  //   name: "home lighting",
+  //   image: "https://dummyjson.com/image/i/products/98/1.jpg",
+  // },
 
   {
     id: "fragrances",
@@ -96,21 +112,24 @@ export const productsCategories = [
 ];
 
 export const productsCategoriesNames = [
-  { id: 1, url: "#smartphones", text: "smartphones" },
-  { id: 2, url: "#laptops", text: "laptops" },
-  { id: 3, url: "#mens-watches", text: "mens watches" },
-  { id: 4, url: "#mens-shirts", text: "mens shirts" },
-  { id: 5, url: "#womens-dresses", text: "womens dresses" },
+  { id: 1, url: "#womens-dresses", text: "womens dresses" },
+  { id: 2, url: "#lighting", text: "home lighting" },
+  { id: 3, url: "#laptops", text: "laptops" },
+  { id: 4, url: "#smartphones", text: "smartphones" },
+  // { id: 4, url: "#laptops", text: "laptops" },
+  { id: 5, url: "#mens-watches", text: "mens watches" },
+  { id: 6, url: "#mens-shirts", text: "mens shirts" },
+  // { id: 5, url: "#womens-dresses", text: "womens dresses" },
 
-  { id: 6, url: "#womens-watches", text: "womens watches" },
-  { id: 7, url: "#womens-jewellery", text: "womens-jewellery" },
-  { id: 8, url: "#womens-bags", text: "womens bags" },
-  { id: 9, url: "#tops", text: "tops" },
-  { id: 10, url: "#mens-shoes", text: "mens shoes" },
-  { id: 11, url: "#womens-shoes", text: "womens footwear" },
-  { id: 12, url: "#sunglasses", text: "sunglasses" },
-  { id: 13, url: "#automotive", text: "automotive" },
-  { id: 14, url: "#lighting", text: "home lighting" },
+  { id: 7, url: "#womens-watches", text: "womens watches" },
+  { id: 8, url: "#womens-jewellery", text: "womens-jewellery" },
+  { id: 9, url: "#womens-bags", text: "womens bags" },
+  { id: 10, url: "#tops", text: "tops" },
+  { id: 11, url: "#mens-shoes", text: "mens shoes" },
+  { id: 12, url: "#womens-shoes", text: "womens footwear" },
+  { id: 13, url: "#sunglasses", text: "sunglasses" },
+  { id: 14, url: "#automotive", text: "automotive" },
+  // { id: 14, url: "#lighting", text: "home lighting" },
 
   { id: 15, url: "#fragrances", text: "fragrances" },
   { id: 16, url: "#home-decoration", text: "home decoration" },
