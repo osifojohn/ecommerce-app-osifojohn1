@@ -42,7 +42,9 @@ html {
 
   @include respond(tab-port) {
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    scroll-padding-top: 12rem;
   }
+  height: 100%;
 }
 
 body {
@@ -59,19 +61,20 @@ body {
   background-repeat: no-repeat;
 
   margin: 0 auto;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 8rem;
 }
 
 .homePage {
   display: grid;
   @include grid-template-columns;
-  min-height: calc(100vh - 12rem);
 }
 
 .productsPage {
   display: grid;
   @include grid-template-columns;
   grid-template-rows: repeat(3, min-content);
-  min-height: calc(100vh - 12rem);
 }
 
 .singleProductPage {
@@ -83,5 +86,6 @@ body {
     grid-template-rows: repeat(3, min-content) 40vw;
   }
   margin-bottom: 2rem;
-  min-height: calc(100vh - 12rem);
 }
+// .cartPage {
+// }

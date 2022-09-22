@@ -22,7 +22,7 @@
     font-size: 1.8rem;
     background-color: var(--color-primary-light);
     display: grid;
-    grid-template-columns: 25% 32vw;
+    grid-template-columns: 25% 22vw;
     justify-content: center;
     align-content: center;
     gap: 0 12rem;
@@ -39,21 +39,21 @@
       justify-self: center;
       @include respond(phone) {
         font-size: 1.75rem;
+        margin: 0 1.5rem;
       }
     }
 
     & figure {
       width: 100%;
       height: 100%;
-      align-self: stretch;
+      align-self: center;
       box-shadow: var(--shadow-light);
     }
 
     & img {
-      display: block;
+      // display: block;
       width: 100%;
       height: 100%;
-      // object-fit: cover;
     }
   }
 }
@@ -66,6 +66,7 @@
   }
   @include respond(phone) {
     font-size: 2rem !important;
+    display: none !important;
   }
 }
 
