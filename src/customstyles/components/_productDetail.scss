@@ -28,8 +28,10 @@
     width: 100%;
     height: 100%;
     display: grid;
+    grid-template-rows: 55vh min-content;
     align-items: center;
     justify-items: center;
+
     @include respond(tab-land) {
       grid-template-rows: 35vh min-content;
     }
