@@ -9,6 +9,8 @@ import {
   LIST_VIEW,
   UPDATE_SORT,
   SORT_PRODUCTS,
+  UPDATE_FILTER,
+  FILTER_PRODUCTS,
 } from "../actions";
 
 const FilterContext = React.createContext();
@@ -18,6 +20,12 @@ const initialState = {
   products: [],
   grid_view: true,
   sort: "price-lowest",
+
+  filters: {
+    min_price: 0,
+    max_price: 0,
+    price: 0,
+  },
 };
 
 export const FilterProvider = ({ children }) => {
@@ -26,8 +34,9 @@ export const FilterProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
+    dispatch({ type: FILTER_PRODUCTS });
     dispatch({ type: SORT_PRODUCTS });
-  }, [state.sort]);
+  }, [state.sort, state.filters]);
 
   const gridView = () => {
     dispatch({ type: GRID_VIEW });
@@ -51,9 +60,15 @@ export const FilterProvider = ({ children }) => {
     dispatch({ type: UPDATE_SORT, payload: value });
   };
 
+  const updateFilter = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    dispatch({ type: UPDATE_FILTER, payload: { name, value } });
+  };
+
   return (
     <FilterContext.Provider
-      value={{ ...state, gridView, listView, upDateSort }}
+      value={{ ...state, gridView, listView, upDateSort, updateFilter }}
     >
       {children}
     </FilterContext.Provider>
