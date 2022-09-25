@@ -20,8 +20,16 @@ const PageNavbar = () => {
           <button>Checkout</button>
 
           <div className="nav__cart-box">
-            <button className="nav__cart-text">Cart</button>
-            <button className="nav__cart-icon">
+            <button
+              className="nav__cart-text"
+              onClick={() => navigate("/cart")}
+            >
+              Cart
+            </button>
+            <button
+              className="nav__cart-icon"
+              onClick={() => navigate("/cart")}
+            >
               <FaShoppingCart />
             </button>
             <span>{total_items}</span>

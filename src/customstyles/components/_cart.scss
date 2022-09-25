@@ -260,4 +260,22 @@ button {
       padding: 0.8rem 4.7rem;
     }
   }
+
+  &__empty {
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: var(--color-primary);
+    padding: 1rem 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    &:link,
+    &:visited {
+      background-color: var(--color-primary);
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+  }
 }
