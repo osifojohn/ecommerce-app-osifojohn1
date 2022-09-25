@@ -11,6 +11,8 @@ import RecommededProducts from "./RecommededProducts";
 import PageNavbar from "./PageNavbar";
 import SearchHero from "./SeachHero";
 import Stars from "./Stars";
+import AddToCart from "./AddToCart";
+import CartContent from "./CartContent";
 
 export {
   Navbar,
@@ -26,4 +28,6 @@ export {
   RecommededProducts,
   PageNavbar,
   Stars,
+  AddToCart,
+  CartContent,
 };

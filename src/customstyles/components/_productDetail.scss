@@ -114,7 +114,7 @@
   }
 }
 
-.cart {
+.add-to-cart {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   gap: 1.5rem 2.5rem;
@@ -124,7 +124,8 @@
 
   & > *:not(:last-child) {
     background-color: transparent;
-    font-size: 2.5rem;
+    font-size: 1.7rem;
+    color: inherit;
   }
   & > * {
     color: inherit;
@@ -140,7 +141,7 @@
   }
 
   &__num {
-    font-size: 5rem;
+    font-size: 6rem;
   }
 
   &__btn {
@@ -150,6 +151,11 @@
     background-color: var(--color-primary);
     padding: 1rem;
     color: #fff;
+    text-decoration: none;
+    &:link,
+    &:visited {
+      background-color: var(--color-primary);
+    }
 
     &:hover,
     &:focus {

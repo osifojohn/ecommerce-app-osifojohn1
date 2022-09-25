@@ -3,8 +3,10 @@ import React from "react";
 import { FaShoppingCart, FaUserPlus } from "react-icons/fa";
 
 import { useNavigate } from "react-router-dom";
+import { useCartContext } from "../contexts/cart_context";
 
 const PageNavbar = () => {
+  const { total_items } = useCartContext();
   const navigate = useNavigate();
 
   return (
@@ -22,7 +24,7 @@ const PageNavbar = () => {
             <button className="nav__cart-icon">
               <FaShoppingCart />
             </button>
-            <span>0</span>
+            <span>{total_items}</span>
           </div>
 
           <div>

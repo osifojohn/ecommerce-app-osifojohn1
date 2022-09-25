@@ -7,8 +7,10 @@ import { BsSearch } from "react-icons/bs";
 import { useProductsContext } from "../contexts/products_context";
 
 import { useNavigate } from "react-router-dom";
+import { useCartContext } from "../contexts/cart_context";
 
 const Navbar = () => {
+  const { total_items } = useCartContext();
   const navigate = useNavigate();
 
   const { isMenuOpen, closeMenu, openMenu, queryProducts, query } =
@@ -47,7 +49,7 @@ const Navbar = () => {
             <button className="nav__cart-icon">
               <FaShoppingCart />
             </button>
-            <span>0</span>
+            <span>{total_items}</span>
           </div>
 
           <div>

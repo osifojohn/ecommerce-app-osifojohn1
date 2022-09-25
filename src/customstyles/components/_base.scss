@@ -87,5 +87,8 @@ body {
   }
   margin-bottom: 2rem;
 }
-// .cartPage {
-// }
+
+.cartPage {
+  display: grid;
+  @include grid-template-columns;
+}

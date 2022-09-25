@@ -7,7 +7,12 @@ import { LoadingSpinal } from "../components";
 import LoadingErrorMsg from "../components/LoadingErrorMsg";
 import ProductImages from "../components/ProductImages";
 
-import { PageNavbar, Stars, RecommededProducts } from "../components";
+import {
+  PageNavbar,
+  Stars,
+  RecommededProducts,
+  AddToCart,
+} from "../components";
 
 const SingleProductPage = () => {
   const {
@@ -74,12 +79,7 @@ const SingleProductPage = () => {
               <p>{brand}</p>
             </div>
 
-            <div className="cart">
-              <button>-</button>
-              <p>1</p>
-              <button>+</button>
-              <button className="cart__btn">add to cart</button>
-            </div>
+            {stock > 0 && <AddToCart product={product} />}
           </article>
         </section>
 
