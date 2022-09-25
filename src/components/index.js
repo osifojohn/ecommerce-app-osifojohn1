@@ -13,6 +13,7 @@ import SearchHero from "./SeachHero";
 import Stars from "./Stars";
 import AddToCart from "./AddToCart";
 import CartContent from "./CartContent";
+import ScrollToTop from "./ScrollToTop";
 
 export {
   Navbar,
@@ -30,4 +31,5 @@ export {
   Stars,
   AddToCart,
   CartContent,
+  ScrollToTop,
 };
