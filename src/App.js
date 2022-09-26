@@ -19,8 +19,8 @@ function App() {
           <Route path="checkout" element={<Checkout />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer />
       </ScrollToTop>
-      <Footer />
     </Router>
   );
 }
