@@ -42,7 +42,6 @@ html {
 
   @include respond(tab-port) {
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
-    // scroll-padding-top: 12rem;
   }
   height: 100%;
 }
@@ -89,6 +88,15 @@ body {
 }
 
 .cartPage {
+  display: grid;
+  @include grid-template-columns;
+}
+.checkoutPage {
+  display: grid;
+  @include grid-template-columns;
+}
+
+.errorPage {
   display: grid;
   @include grid-template-columns;
 }

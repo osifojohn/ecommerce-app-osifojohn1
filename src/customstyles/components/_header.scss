@@ -33,11 +33,12 @@
 .pages {
   align-items: center;
 }
+
 .logo {
   border: none;
   background-color: transparent;
 
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   margin-left: 2.5rem;
   color: var(--color-primary);
@@ -55,7 +56,6 @@
 
   @include respond(phone) {
     margin-right: 2rem;
-    font-size: 1.3rem;
   }
 }
 
@@ -149,6 +149,12 @@
   align-items: center;
   gap: 0 5rem;
   margin-right: 5rem;
+
+  &__checkout {
+    @include respond(phone) {
+      display: none;
+    }
+  }
   @include respond(phone) {
     gap: 0 1.5rem;
     margin-right: 3rem;

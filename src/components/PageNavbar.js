@@ -1,11 +1,13 @@
 import React from "react";
 
-import { FaShoppingCart, FaUserPlus } from "react-icons/fa";
+import { FaShoppingCart, FaUserPlus, FaUserMinus } from "react-icons/fa";
 
 import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../contexts/cart_context";
+import { useUserContext } from "../contexts/user_context";
 
 const PageNavbar = () => {
+  const { loginWithRedirect, logout, myUser } = useUserContext();
   const { total_items } = useCartContext();
   const navigate = useNavigate();
 
@@ -13,11 +15,19 @@ const PageNavbar = () => {
     <>
       <header className="header pages">
         <button className="logo" onClick={() => navigate("/")}>
-          <h1>MrJohny</h1>
+          MrJohny
         </button>
 
         <nav className="nav">
-          <button>Checkout</button>
+          {myUser && (
+            <button
+              type="button"
+              onClick={() => navigate("/checkout")}
+              className="nav__checkout"
+            >
+              Checkout
+            </button>
+          )}
 
           <div className="nav__cart-box">
             <button
@@ -35,12 +45,24 @@ const PageNavbar = () => {
             <span>{total_items}</span>
           </div>
 
-          <div>
-            <button>Login</button>
-            <button>
-              <FaUserPlus />
-            </button>
-          </div>
+          {myUser ? (
+            <div>
+              <button
+                type="button"
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                Logout
+                <FaUserMinus />
+              </button>
+            </div>
+          ) : (
+            <div>
+              <button type="button" onClick={loginWithRedirect}>
+                Login
+                <FaUserPlus />
+              </button>
+            </div>
+          )}
         </nav>
       </header>
     </>

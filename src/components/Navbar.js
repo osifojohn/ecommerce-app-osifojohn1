@@ -1,16 +1,24 @@
 import React from "react";
 
-import { FaShoppingCart, FaUserPlus, FaBars } from "react-icons/fa";
+import {
+  FaShoppingCart,
+  FaUserPlus,
+  FaUserMinus,
+  FaBars,
+} from "react-icons/fa";
+
+import { useNavigate } from "react-router";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
 
 import { useProductsContext } from "../contexts/products_context";
 
-import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../contexts/cart_context";
+import { useUserContext } from "../contexts/user_context";
 
 const Navbar = () => {
   const { total_items } = useCartContext();
+  const { loginWithRedirect, logout, myUser } = useUserContext();
   const navigate = useNavigate();
 
   const { isMenuOpen, closeMenu, openMenu, queryProducts, query } =
@@ -24,8 +32,8 @@ const Navbar = () => {
   return (
     <>
       <header className="header home">
-        <button className="logo" onClick={() => navigate("/")}>
-          <h1>MrJohny</h1>
+        <button className="logo" type="button" navigate="/">
+          MrJohny
         </button>
 
         <form className="search" onSubmit={handleSubmit}>
@@ -42,7 +50,15 @@ const Navbar = () => {
         </form>
 
         <nav className="nav">
-          <button>Checkout</button>
+          {myUser && (
+            <button
+              type="button"
+              onClick={() => navigate("/checkout")}
+              className="nav__checkout"
+            >
+              Checkout
+            </button>
+          )}
 
           <div className="nav__cart-box">
             <button
@@ -54,18 +70,31 @@ const Navbar = () => {
             <button
               className="nav__cart-icon"
               onClick={() => navigate("/cart")}
+              type="button"
             >
               <FaShoppingCart />
             </button>
             <span>{total_items}</span>
           </div>
 
-          <div>
-            <button>Login</button>
-            <button>
-              <FaUserPlus />
-            </button>
-          </div>
+          {myUser ? (
+            <div>
+              <button
+                type="button"
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                Logout
+                <FaUserMinus />
+              </button>
+            </div>
+          ) : (
+            <div>
+              <button type="button" onClick={loginWithRedirect}>
+                Login
+                <FaUserPlus />
+              </button>
+            </div>
+          )}
 
           {!query ? (
             <button className="nav__hamburger">
