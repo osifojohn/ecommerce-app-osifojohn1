@@ -35,7 +35,7 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route path="error" element={<Error />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </Router>
