@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 import { productsCategoriesNames } from "../utils/constants";
 
@@ -15,13 +16,17 @@ const NavMenu = () => {
           {productsCategoriesNames.map((category) => {
             return (
               <li className="nav-menu__item" key={category.id}>
-                <a
-                  href={category.url}
-                  className="nav-menu__link"
+                <Link
+                  to={category.url}
+                  spy={true}
+                  smooth={true}
+                  offset={-900}
+                  duration={500}
                   onClick={closeMenu}
+                  className="nav-menu__link"
                 >
                   {category.text}
-                </a>
+                </Link>
               </li>
             );
           })}

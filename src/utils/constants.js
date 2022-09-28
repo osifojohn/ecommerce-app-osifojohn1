@@ -112,29 +112,29 @@ export const productsCategories = [
 ];
 
 export const productsCategoriesNames = [
-  { id: 1, url: "#womens-dresses", text: "womens dresses" },
-  { id: 2, url: "#lighting", text: "home lighting" },
-  { id: 3, url: "#laptops", text: "laptops" },
-  { id: 4, url: "#smartphones", text: "smartphones" },
+  { id: 1, url: "womens-dresses", text: "womens dresses" },
+  { id: 2, url: "lighting", text: "home lighting" },
+  { id: 3, url: "laptops", text: "laptops" },
+  { id: 4, url: "smartphones", text: "smartphones" },
   // { id: 4, url: "#laptops", text: "laptops" },
-  { id: 5, url: "#mens-watches", text: "mens watches" },
-  { id: 6, url: "#mens-shirts", text: "mens shirts" },
+  { id: 5, url: "mens-watches", text: "mens watches" },
+  { id: 6, url: "mens-shirts", text: "mens shirts" },
   // { id: 5, url: "#womens-dresses", text: "womens dresses" },
 
-  { id: 7, url: "#womens-watches", text: "womens watches" },
-  { id: 8, url: "#womens-jewellery", text: "womens-jewellery" },
-  { id: 9, url: "#womens-bags", text: "womens bags" },
-  { id: 10, url: "#tops", text: "tops" },
-  { id: 11, url: "#mens-shoes", text: "mens shoes" },
-  { id: 12, url: "#womens-shoes", text: "womens footwear" },
-  { id: 13, url: "#sunglasses", text: "sunglasses" },
-  { id: 14, url: "#automotive", text: "automotive" },
+  { id: 7, url: "womens-watches", text: "womens watches" },
+  { id: 8, url: "womens-jewellery", text: "womens-jewellery" },
+  { id: 9, url: "womens-bags", text: "womens bags" },
+  { id: 10, url: "tops", text: "tops" },
+  { id: 11, url: "mens-shoes", text: "mens shoes" },
+  { id: 12, url: "womens-shoes", text: "womens footwear" },
+  { id: 13, url: "sunglasses", text: "sunglasses" },
+  { id: 14, url: "automotive", text: "automotive" },
   // { id: 14, url: "#lighting", text: "home lighting" },
 
-  { id: 15, url: "#fragrances", text: "fragrances" },
-  { id: 16, url: "#home-decoration", text: "home decoration" },
-  { id: 17, url: "#furniture", text: "furniture" },
-  { id: 18, url: "#skincare", text: "skincare" },
+  { id: 15, url: "fragrances", text: "fragrances" },
+  { id: 16, url: "home-decoration", text: "home decoration" },
+  { id: 17, url: "furniture", text: "furniture" },
+  { id: 18, url: "skincare", text: "skincare" },
 ];
 
 export const heroLink = [

@@ -46,7 +46,7 @@ const ProductsPage = () => {
       <PageNavbar />
       <main className="productsPage">
         <div className="pageHero">
-          <h2 className="pageHero__text">{title}</h2>
+          <h1 className="pageHero__text">{title}</h1>
         </div>
         <SelectBy />
         <ProductsList products={products} />

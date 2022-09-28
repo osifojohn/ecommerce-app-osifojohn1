@@ -45,7 +45,7 @@ const Hero = () => {
                 <Link to={url}>
                   <img
                     src={image}
-                    alt={name}
+                    alt=""
                     className="hero__photo"
                     onClick={() => fetchProducts(name)}
                   />

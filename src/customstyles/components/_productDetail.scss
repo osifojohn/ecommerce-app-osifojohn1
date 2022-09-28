@@ -61,6 +61,7 @@
       cursor: pointer;
       height: 100%;
       width: 100%;
+      border-radius: 2px;
     }
   }
   &__active-image {
@@ -124,7 +125,6 @@
 
   & > *:not(:last-child) {
     background-color: transparent;
-    font-size: 1.7rem;
     color: inherit;
   }
   & > * {

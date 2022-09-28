@@ -7,9 +7,11 @@ const CheckoutPage = () => {
       <PageNavbar />
       <main className="checkoutPage">
         <div className="pageHero">
-          <h2 className="pageHero__text">Checkout</h2>
+          <h1 className="pageHero__text">Checkout</h1>
         </div>
-        <section className="checkout">Checkout</section>
+        <section className="checkout">
+          <h2>Page still under construction</h2>
+        </section>
       </main>
     </>
   );

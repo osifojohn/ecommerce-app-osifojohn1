@@ -14,7 +14,7 @@ const CartPage = () => {
         <PageNavbar />
         <main className="cartPage">
           <div className="pageHero">
-            <h2 className="pageHero__text">Cart</h2>
+            <h1 className="pageHero__text">Cart</h1>
           </div>
           <div className="loadingError ">
             <h2>Your cart is empty</h2>

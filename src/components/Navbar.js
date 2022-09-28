@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 import { useNavigate } from "react-router";
-import { AiOutlineClose } from "react-icons/ai";
+import { FaTimes } from "react-icons/fa";
 import { BsSearch } from "react-icons/bs";
 
 import { useProductsContext } from "../contexts/products_context";
@@ -97,9 +97,9 @@ const Navbar = () => {
           )}
 
           {!query ? (
-            <button className="nav__hamburger">
+            <button className="nav__hamburger" type="button">
               {isMenuOpen ? (
-                <AiOutlineClose onClick={closeMenu} />
+                <FaTimes onClick={closeMenu} />
               ) : (
                 <FaBars onClick={openMenu} />
               )}
