@@ -193,11 +193,15 @@
   }
   &__hamburger {
     display: none;
+
     color: var(--color-primary) !important;
+    &--close {
+      color: #e66b6b !important;
+    }
     @include respond(phone) {
       display: block;
       font-weight: 600;
-      margin-left: 1rem;
+      margin-left: -0.4rem;
       font-size: 2.3rem !important;
     }
   }

@@ -97,7 +97,12 @@ const Navbar = () => {
           )}
 
           {!query ? (
-            <button className="nav__hamburger" type="button">
+            <button
+              className={`${
+                isMenuOpen ? "nav__hamburger--close" : "nav__hamburger"
+              }`}
+              type="button"
+            >
               {isMenuOpen ? (
                 <FaTimes onClick={closeMenu} />
               ) : (
