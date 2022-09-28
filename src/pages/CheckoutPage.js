@@ -10,7 +10,7 @@ const CheckoutPage = () => {
           <h1 className="pageHero__text">Checkout</h1>
         </div>
         <section className="checkout">
-          <h2>Page still under construction</h2>
+          <h2>Page under construction</h2>
         </section>
       </main>
     </>
