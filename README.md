@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This is an ecommerce single page web application built with Reactjs, SCSS and Context API. This app is made up of six (6) pages, and it allows users to make query request of products, users authentication with Auth0, browse products by categories, filter and sort products, recommend products, add products to cart, and checkout.
+This is an ecommerce single page web application built with Reactjs, SCSS and Context API. This app is made up of six (6) pages, which allows users to make query request of products, users authentication with Auth0, browse products by categories, filter and sort products, recommend products, add products to cart, and checkout.
 
 ### Features
 
